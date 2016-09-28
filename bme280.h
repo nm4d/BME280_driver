@@ -72,6 +72,10 @@
 * @brief For the Linux platform support
 * Please use the types.h for your data types definitions
 */
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifdef	__KERNEL__
 
 #include <linux/types.h>
@@ -1711,4 +1715,9 @@ s32 v_uncom_pressure_s32);
  */
 BME280_RETURN_FUNCTION_TYPE bme280_compute_wait_time(u8
 *v_delaytime_u8);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif
